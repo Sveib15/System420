@@ -10,3 +10,5 @@ I dette repository vil det bli publisert filer som hører til prosjektet vi driv
 * Mikael Kile
 * Tor Arve Skutlaberg
 
+Alle klasser som hører til prosjektet ligger foreløpig i slit-lib/src/classes
+
