@@ -28,16 +28,11 @@ public class ModulDatabaseController
         try 
         {  
             // mysql database driver
-            String driverName = "com.mysql.jdbc.Driver";
-            Class.forName(driverName);  
             
-            // database url, username and password
-            String url = "jdbc:mysql://localhost:3306/modul?zeroDateTimeBehavior=convertToNull&autoReconnect=true&useSSL=false";
-            String username = "root";  
-            String password = "root";  
-            
+            Class.forName(DatabaseInfo.driverName);  
+       
             // creates connection
-            conn = DriverManager.getConnection(url, username, password);
+            conn = DriverManager.getConnection(DatabaseInfo.url, DatabaseInfo.username, DatabaseInfo.password);
         } 
         catch (ClassNotFoundException e) {
             e.printStackTrace();
