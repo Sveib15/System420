@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package classes;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Adne
  */
-public class Modul {
+public class Modul implements Serializable 
+{
     private String name;
     private String description;
     private ArrayList<String> requirements;

@@ -5,6 +5,7 @@
  */
 package classes;
 
+import classes.Modul;
 import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

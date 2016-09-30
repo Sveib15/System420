@@ -6,12 +6,14 @@
 package classes;
 
 import java.io.File;
+import java.io.Serializable;
 
 /**
  *
  * @author Adne
  */
-public class Delivery {
+public class Delivery implements Serializable
+{
     private String modulID;
     private String deliveredDate;
     private String comment;
