@@ -5,6 +5,7 @@
  */
 package classes;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -12,7 +13,8 @@ import java.util.HashMap;
  *
  * @author Adne
  */
-public class User {
+public class User implements Serializable 
+{
     private String firstname;
     private String lastname;
     private String email;

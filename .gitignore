@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /slit/slit-ejb/build/
 /slit/slit-ejb/dist/
 /slit/slit-ejb/nbproject/private/
@@ -19,3 +20,49 @@
 /Old project/Modules/build/
 /Old project/Modules/dist/
 /Old project/Modules/nbproject/private/
+=======
+#ant specific
+dist/
+build/
+
+#netbeans specific
+core
+nbproject/*
+!nbproject/project.properties
+!nbproject/project.xml
+
+#java specific
+*.class
+
+#general swap/backup files
+*.so
+*.log
+*.out
+*~
+*.swp
+*.DS_Store
+*.lock
+
+slit-lib/dist/
+slit-lib/build/
+slit-lib/nbproject/*
+!slit-lib/nbproject/project.properties
+!slit-lib/nbproject/project.xml
+
+slit-client/dist/
+slit-client/build/
+slit-client/nbproject/*
+!slit-client/nbproject/project.properties
+!slit-client/nbproject/project.xml
+
+slit/slit-ejb/dist/
+slit/slit-ejb/build/
+slit/slit-ejb/nbproject/*
+!slit/slit-ejb/nbproject/project.properties
+!slit/slit-ejb/nbproject/project.xml
+
+slit/dist/
+slit/build/
+slit/nbproject/*
+!slit/nbproject/project.properties
+!slit/nbproject/project.xml

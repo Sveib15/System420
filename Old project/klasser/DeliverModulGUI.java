@@ -5,8 +5,10 @@
  */
 package classes;
 
+import classes.Delivery;
+import classes.Modul;
+import classes.User;
 import java.io.File;
-import java.sql.Blob;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,12 +22,14 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javax.ejb.EJB;
 
 /**
  *
  * @author Adne
  */
-public class DeliverModulGUI {
+public class DeliverModulGUI 
+{
     private File file;
     private Stage window;
     private FileChooser fc;

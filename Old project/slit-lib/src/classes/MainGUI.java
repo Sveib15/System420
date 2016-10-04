@@ -5,9 +5,14 @@
  */
 package classes;
 
+import classes.Delivery;
+import classes.Modul;
+//import gui.CreateModulGUI;
 import java.util.ArrayList;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -42,6 +47,8 @@ public class MainGUI
     
     public void setMainScene()
     {
+        ModulInfoGUI migui = new ModulInfoGUI();
+        
         BorderPane bp = new BorderPane();
         HBox hbox = new HBox();
         VBox usersBox = new VBox();
@@ -54,7 +61,8 @@ public class MainGUI
         
         for(User u: users)
         {
-            Label usrLbl = new Label(u.getEmail());
+            //Label usrLbl = new Label(u.getEmail());
+            Label usrLbl = new Label(u.getFirstname() + " " + u.getLastname());
             usrLbl.setPrefWidth(200);
             usersBox.getChildren().add(usrLbl);
             usersLbl.add(usrLbl);
@@ -68,6 +76,7 @@ public class MainGUI
             vbox.setAlignment(Pos.TOP_CENTER);
             
             Label modulName = new Label(m.getName());
+            modulName.setOnMouseClicked(e-> migui.showModulInfo(m, 1));
             modulName.setPrefWidth(200);
             vbox.getChildren().add(modulName);
             
@@ -94,11 +103,20 @@ public class MainGUI
             hbox.getChildren().add(vbox);
         }
         
+        //CreateModulGUI cmgui = new CreateModulGUI();
         
+        Button createBtn = new Button("Opprett modul");
+        //createBtn.setOnAction(e-> cmgui.show());
+        HBox btnbox = new HBox();
+        btnbox.getChildren().add(createBtn);
+        btnbox.setPadding(new Insets(10, 10, 10, 10));
+        btnbox.setAlignment(Pos.CENTER_LEFT);
+        btnbox.setSpacing(10);
         
         bp.setCenter(hbox);
+        bp.setBottom(btnbox);
         
-        Scene scene = new Scene(bp, 600, 600);
+        Scene scene = new Scene(bp, 400, 400);
         scene.getStylesheets().add(this.getClass().getResource("mainGUIstyle.css").toExternalForm());
         window.setScene(scene);
     }
