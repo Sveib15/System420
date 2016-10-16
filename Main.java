@@ -1,40 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package slit2client;
 
-package slit2_client;
-
+import DataModel.UserDataModel;
+import ServerLib.UserSessionBeanRemote;
 import javax.ejb.EJB;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceUnit;
-import pojo.Person;
-
-
 
 /**
  *
- * @author torar_000
+ * @author Ådne
  */
-public class Main {
-    
+public class Main 
+{
     @EJB
-    //@PersistenceUnit(unitName = "Person")
-    private static EntityManagerFactory emf;
-
-    public static void main(String[] args) {
-        
-        Person p1 = new Person(1, "Test1");
-       
-        Person p2 = new Person(2, "Test2");
-        
-        emf = Persistence.createEntityManagerFactory("Test");
-        
-        EntityManager em = emf.createEntityManager();
-        
-        em.persist(p1);
-        
-        
-        
+    private static UserSessionBeanRemote userSessionBean;
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) 
+    {
+        UserDataModel userDataModel = userSessionBean.getUserTest();
+        System.out.println(userDataModel.getFirstname() + " " + userDataModel.getLastname());
     }
     
 }
